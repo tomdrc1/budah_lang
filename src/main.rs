@@ -12,10 +12,10 @@ fn main()
     let file_content = file_handler::read_file(file_path.to_string());
     let lines = string_handler::split_newlines(file_content);
 
-    let interpreter = budah_interpreter::BudahInterpreter::new();
+    let mut interpreter = budah_interpreter::BudahInterpreter::new();
 
     for line in lines
     {
-
+        interpreter.interpert(line);
     }
 }
