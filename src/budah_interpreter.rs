@@ -25,8 +25,13 @@ impl BudahInterpreter
     {
         let split_words = string_handler::split_words(current_line);
         
-        for word in split_words
+        for mut word in split_words
         {
+            if word.ends_with('\r')
+            {
+                word.pop();
+            }
+            
             match word.as_str() {
                 "Budah" => self.decrement_index(),
                 "budaH" => self.increment_index(),
@@ -69,6 +74,6 @@ impl BudahInterpreter
 
     fn print(&self)
     {
-        print!("{}", self.memory[self.index as usize]);
+        print!("{}", self.memory[self.index as usize] as char);
     }
 }
