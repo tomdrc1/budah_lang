@@ -1,8 +1,8 @@
 mod file_handler;
-mod string_handler;
 mod budah_interpreter;
 
 use std::env;
+use budah_interpreter::string_handler;
 
 fn main()
 {
@@ -16,6 +16,6 @@ fn main()
 
     for line in lines
     {
-        
+
     }
 }
