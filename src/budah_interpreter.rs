@@ -8,6 +8,7 @@ pub struct BudahInterpreter
 
 impl BudahInterpreter
 {
+    /// Returns a new BudahInterpreter instance
     pub fn new() -> BudahInterpreter
     {
         BudahInterpreter{memory: [0; MEMORY_SIZE], index: 0}
